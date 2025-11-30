@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    display: block;
+    padding: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list a:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+.nav-btn {
+    display: none;
+}
+
+.navbar {
+        justify-content: space-between;
+}
+
+.navbar img {
+    padding-left: 5px;
+    width: 120px;
+    height: 83px;
+}
+
+@media (max-width:1000px) {
+    .nav-btn {
+        font-size: 2em;
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: block;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(88, 88, 88);
+    }
+
+    .drop:hover .nav-list {
+        display: block;
+        position: absolute;
+        right: 1px;
+        background-color: rgb(32, 32, 32);
+        z-index: 3;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+
+.footer {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    margin: 8px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE: tablet */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+/* mobile */
+@media (max-width: 500px) {
+    .footer-column h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+.big-contact-section {
+    background-image: url('https://alltops.com.ua/wp-content/uploads/2024/11/%D0%9C%D1%96%D1%81%D1%86%D1%8F-%D0%B4%D0%B5-%D0%B7%D0%B4%D1%96%D0%B9%D1%81%D0%BD%D1%8E%D1%8E%D1%82%D1%8C%D1%81%D1%8F-%D0%B1%D0%B0%D0%B6%D0%B0%D0%BD%D0%BD%D1%8F.jpg'); /* поставь путь к своей картинке */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+/* затемняющий слой */
+.big-contact-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* затемнение */
+}
+
+/* container content above overlay */
+.big-contact-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+    padding: 0 20px;
+}
+
+/* Заголовок */
+.big-contact-container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Линийка */
+.underline {
+    width: 70px;
+    height: 3px;
+    background: #27d2d6; /* аквамарин */
+    margin-bottom: 25px;
+}
+
+/* Текст сверху */
+.intro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* === FORM STYLES === */
+
+.big-form input,
+.big-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.big-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* BUTTON */
+.big-form button {
+    background: #27d2d6;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.big-form button:hover {
+    background: #1bb8bb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .big-contact-container h2 {
+        font-size: 26px;
+    }
+
+    .intro-text {
+        font-size: 17px;
+    }
+
+    .big-form {
+        width: 85%;
+    }
+}
