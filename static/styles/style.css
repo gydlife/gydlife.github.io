@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+.navbar {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    display: block;
+    padding: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list a:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+.nav-btn {
+    display: none;
+}
+
+.navbar {
+        justify-content: space-between;
+}
+
+.navbar img {
+    padding-left: 5px;
+    width: 120px;
+    height: 83px;
+}
+
+@media (max-width:1000px) {
+    .nav-btn {
+        font-size: 2em;
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: block;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(88, 88, 88);
+    }
+
+    .drop:hover .nav-list {
+        display: block;
+        position: absolute;
+        right: 1px;
+        background-color: rgb(32, 32, 32);
+        z-index: 3;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+/* hero */
+.bgphoto {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bgphoto img {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.photo-text {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.photo-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.photo-text h2 {
+    font-size: 22px;
+    margin-bottom: 200px;
+    font-weight: 300;
+}
+
+.effect {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.244);
+}
+
+@media (max-width:600px) {
+    .bgphoto img {
+        height: 70vh;
+    }
+    .effect {
+        height: 70vh;
+    }
+    .bgphoto {
+        height: 70vh;
+    }
+}
+
+/* main */
+.translation-box {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px 45px;
+
+    
+    border: 2px solid #cfeff0; 
+    border-radius: 14px;
+
+    
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    background: white; 
+    text-align: center;
+
+    font-family: "Georgia", serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+
+.translation-box::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #1b11a7;
+    margin: 0 auto 25px auto;
+    border-radius: 2px;
+}
+
+.translation-box p {
+    font-size: 20px;
+}
+
+.translation-box strong {
+    font-weight: 700;
+}
+
+
+.langs {
+    font-size: 19px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+.lang-item {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #222;
+}
+
+.zag {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.container-3 {
+    max-width: 1400px;
+    margin: 60px;
+    padding: 20px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #000000, #00e5e5) 1;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+
+@media (max-width: 800px) {
+    .container-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        margin-inline: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-3 {
+        grid-template-columns: repeat(1, 1fr);
+         margin-inline: 0;
+    }
+
+    .card {
+        margin-inline: 0;
+    }
+}
+
+
+
+.zag-two {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+
+.container-4 {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card4 {
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #009c9c; 
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card4 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.card4 h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card4 p {
+    font-size: 17px;
+    line-height: 1.4;
+    font-family: "Georgia", serif;
+    color: gray;
+}
+
+@media (max-width: 800px) {
+    .container-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+    .container-4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.contact-section {
+    background-image: url('https://s2.best-wallpaper.net/wallpaper/2560x1440/1904/Prague-Czech-Republic-beautiful-city-night-lights-buildings_2560x1440.jpg'); /* ⚠️ вставь путь к твоему фото Праги */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+
+.contact-top-text {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+.contact-overlay {
+    background: rgba(0, 180, 190, 0.65); 
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 40px 50px 40px;
+    border-radius: 4px;
+}
+
+
+.contact-overlay h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 12px 15px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.9);
+}
+
+
+.contact-form button {
+    background: transparent;
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid white;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: #00b4be;
+}
+
+
+@media (max-width: 800px) {
+    .contact-overlay {
+        width: 70%;
+        padding: 30px;
+    }
+    .contact-overlay h2 {
+        font-size: 26px;
+    }
+    .contact-top-text {
+        font-size: 17px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        width: 95%;
+    }
+    
+}
+
+/* footer */
+.footer {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    margin: 8px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .footer-column h3 {
+        font-size: 20px;
+    }
+}
+
